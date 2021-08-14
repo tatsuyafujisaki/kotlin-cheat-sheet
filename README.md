@@ -325,21 +325,20 @@ val c: String = " ".ifBlank { "default" } // "default"
 val d: String = "".ifEmpty { "default" } // "default"
 ```
 
-## How to remove a substring
-```kotlin
-val result1: String = "abc".removePrefix("a") // bc
-val result2: String = "abc".removeSuffix("c") // ab
-val result3: String = "aaa".removeSurrounding("a") // a
-val result4: String = "abc".removeSurrounding("a", "c") // b
-```
-
 ## How to get a substring
 ```kotlin
-val s = "a/b/c"
-val result1: String = s.substringBefore("/") // a
-val result2: String = s.substringAfter("/") // b/c
-val result3: String = s.substringBeforeLast("/") // a/b
-val result4: String = s.substringAfterLast("/") // c
+val s1: String = "a/b/c".substringBefore("/") // a
+val s2: String = "a/b/c".substringAfter("/") // b/c
+val s3: String = "a/b/c".substringBeforeLast("/") // a/b
+val s4: String = "a/b/c".substringAfterLast("/") // c
+```
+
+## How to remove a substring
+```kotlin
+val s1: String = "abc".removePrefix("a") // bc
+val s2: String = "abc".removeSuffix("c") // ab
+val s3: String = "aaa".removeSurrounding("a") // a
+val s4: String = "abc".removeSurrounding("a", "c") // b
 ```
 
 ## How to use joinToString(...)
